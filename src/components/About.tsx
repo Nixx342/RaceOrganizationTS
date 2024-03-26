@@ -1,11 +1,11 @@
-function About() {
+
+
+const About: React.FC = () => {
   return (
     <div>
-      <h1>123</h1>
-      <div>123</div>
-      <div>123</div>
+      <h1>Инфа о забеге</h1>
     </div>
   );
-}
+};
 
 export default About;

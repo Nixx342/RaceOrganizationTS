@@ -1,7 +1,6 @@
-// import { useDispatch, useSelector } from "react-redux";
-// import { RootStore } from "../store/store";
+import {Participant} from '../assets/types'
 
-// interface Participant {
+// interface ParticipantProps {
 //   surname: string;
 //   name: string;
 //   middleName: string;
@@ -13,13 +12,20 @@
 //   hasPayment: boolean;
 // }
 
-const Participants: React.FC = (props) => {
-  // const participants = useSelector((state: RootStore) => state.participant);
-  // const dispatch = useDispatch();
+const Participants: React.FC<Participant[]> = (props) => {
+
   return (
     <div>
-      <span>Фамилия</span>
-      {props.name}
+      <h1>Участники</h1>
+      {
+        props.participants.map((item:Participant, index:number) => {
+          return (
+            <div key={index}>
+              <span>{item.surname}</span>
+            </div>
+          )
+        })
+      }
     </div>
   );
 };
