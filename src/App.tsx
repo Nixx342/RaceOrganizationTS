@@ -4,6 +4,7 @@ import { Link, Routes, Route, Navigate } from "react-router-dom";
 import About from "./components/About";
 import NotFound from "./components/NotFound";
 import {Participant} from './assets/types'
+import { Provider } from "react-redux";
 
 const participants: Participant[] = [
   {
@@ -43,7 +44,7 @@ const participants: Participant[] = [
 
 const App: React.FC = () => {
   return (
-    <>
+    <Provider store={store}>
       <header>
         <nav>
           <Link to={"/about"}>Информация о забеге</Link>
@@ -56,7 +57,7 @@ const App: React.FC = () => {
         <Route path="/participants" element={<Participants participants={participants}/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
+    </Provider>
   );
 };
 
