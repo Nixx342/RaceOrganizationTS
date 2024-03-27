@@ -1,6 +1,6 @@
 import {Participant} from '../assets/types'
 
-const Participants: React.FC<Participant[]> = (participants) => {
+const Participants: React.FC<{participants : Participant[]}> = ({participants}) => {
 
   return (
     <div>

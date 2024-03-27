@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import Participant from '../assets/types.ts'
+import type {Participant} from '../assets/types'
 interface ParticipantsState {
     // participants : Participant[] | null;
     participants : Participant[];
@@ -49,12 +49,12 @@ export const participantsSlice = createSlice({
         addParticipant: (state, action) => {
             state.participants.push(action.payload);
         },
-        removeParticipant: (state, action) => {
-            return state.participants.filter((item)=> item.email !== action.payload)
+        removeParticipant: (state, action: PayloadAction<string>) => {
+            state.participants = state.participants.filter((item) => item.email !== action.payload);
         },
-        changeParticipant: (state, action) => {
-            let index = state.participants.findIndex((item)=> item.email === action.payload.email);
-            if (index != -1){
+        changeParticipant: (state, action: PayloadAction<Participant>) => {
+            const index = state.participants.findIndex((item) => item.email === action.payload.email);
+            if (index !== -1){
                 state.participants[index] = {...state.participants[index], ...action.payload};
             }   
         }

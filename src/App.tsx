@@ -5,6 +5,7 @@ import About from "./components/About";
 import NotFound from "./components/NotFound";
 import {Participant} from './assets/types'
 import { Provider } from "react-redux";
+import {store} from './store/store'
 
 const participants: Participant[] = [
   {
