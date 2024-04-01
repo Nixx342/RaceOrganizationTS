@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type {Participant} from '../assets/types'
 interface ParticipantsState {
-    // participants : Participant[] | null;
-    participants : Participant[];
+    participants : Participant[] | null;
+    // participants : Participant[];
 }
 const initialState: ParticipantsState = {
     participants : [

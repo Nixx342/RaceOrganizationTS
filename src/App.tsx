@@ -6,6 +6,7 @@ import NotFound from "./components/NotFound";
 import {Participant} from './assets/types'
 import { Provider } from "react-redux";
 import {store} from './store/store'
+import ParticipantPage from "./components/ParticipantPage";
 
 const participants: Participant[] = [
   {
@@ -56,6 +57,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Navigate to={"/about"} />} />
         <Route path="/about" element={<About />} />
         <Route path="/participants" element={<Participants participants={participants}/>} />
+        <Route path="/participants/:id" element={<ParticipantPage participants={participants}/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Provider>
