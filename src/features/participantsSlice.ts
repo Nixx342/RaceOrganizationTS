@@ -4,6 +4,7 @@ interface ParticipantsState {
     participants : Participant[] | null;
     // participants : Participant[];
 }
+// const initialState: ParticipantsState = {
 const initialState: ParticipantsState = {
     participants : [
         {

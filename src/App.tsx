@@ -49,14 +49,15 @@ const App: React.FC = () => {
     <Provider store={store}>
       <header>
         <nav>
-          <Link to={"/about"}>Информация о забеге</Link>
+          <Link to={"/about"} className="link-btn">Информация о забеге</Link>
           <Link to={"/participants"}>Участники</Link>
         </nav>
       </header>
       <Routes>
         <Route path="/" element={<Navigate to={"/about"} />} />
         <Route path="/about" element={<About />} />
-        <Route path="/participants" element={<Participants participants={participants}/>} />
+        <Route path="/participants" element={<Participants />} />
+        {/* <Route path="/participants" element={<Participants participants={participants}/>} /> */}
         <Route path="/participants/:id" element={<ParticipantPage participants={participants}/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>

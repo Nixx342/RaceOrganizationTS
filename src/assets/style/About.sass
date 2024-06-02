@@ -1,0 +1,82 @@
+// Стили для экранов от 360px
+@media (min-width: 360px) 
+  // .about-page
+  //   color: red
+  .text-orange
+    color: #e74505
+
+// Стили для планшетов
+@media (min-width: 768px) 
+  // .about-page
+  //   color: blue
+  .text-orange
+    color: #e74505
+
+// Стили для небольших десктопов    
+@media (min-width: 1024px) 
+  // .about-page
+  //   color: green
+  .text-orange
+    color: #e74505
+
+// Стили для больших десктопов 
+@media (min-width: 1600px)
+  .about-page
+    display: flex
+    justify-content: center
+    text-align: center
+    // align-items: center
+  
+  .main-block-img
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 40vw
+    height: 30vh
+    font-size: 2em
+    font-weight: 900
+    color: #ffffff
+    margin: auto 
+    padding: 20px
+    text-align: center
+    background-image: url('../img/about.webp')
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+  .name-page
+    font-size: 8em
+  .size-1d5em
+    font-size: 1.5em
+
+.text-orange
+    color: #e74505
+.text-blue
+  color: #115bbb
+.ticker
+  overflow: hidden
+  // box-sizing: border-box
+  white-space: nowrap
+.ticker p
+  font-size: 4em
+.ticker-content
+  width: 100vw
+  justify-content: space-around
+  // display: inline-block
+  display: flex
+  animation: ticker 25s linear infinite 
+.ticker-item
+  display: inline-block
+  margin-right: 50px
+
+// @keyframes ticker
+//   from
+//     transform: translateX(0)
+//   to
+//     transform: translateX(-50%)
+@keyframes ticker
+  0% 
+    transform: translateX(100%)
+  100% 
+    transform: translateX(0%)
+
+    

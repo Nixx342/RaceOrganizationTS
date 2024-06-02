@@ -1,5 +1,14 @@
+ @font-face{
+  font-family: 'Druk Cyr';
+  src: url('./fonts/DrukCyr-Bold.woff2') format('woff2'),
+       url('./fonts/DrukCyr-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal; 
+ }
+ 
  :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: 'Druk Cyr', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
